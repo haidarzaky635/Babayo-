@@ -1,37 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Babayo</title>
-    <link rel="stylesheet" href="css/p.css">
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BABAYO</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="overflow-hidden ">
-   <nav class="flex bg-yellow-200 justify-between items-center px-16 py-6">
-    <a href="#" class="text-2xl text-orange-600 font-bold">Babayo</a>
-    <ul class="flex space-x-6 text-red-500">
-        <li><a href="#" class="hover:text-red-100">Home</a></li>
-        <li><a href="#" class="hover:text-red-100">About</a></li>
-        <li><a href="#" class="hover:text-red-100">Reservation</a></li>
-        <li><a href="#" class="hover:text-red-100">Pricing</a></li>
-        <li><a href="#" class="hover:text-red-100">Contact</a></li>
-    </ul>
-    <button class="bg-orange-700 text-white font-bold rounded-3xl px-6 py-2 hover:bg-red-900">Login</button>
-   </nav>
-   <main class="relative">
-    <div class="w-36 h-80 absolute bg-rose-700 -right-24 rounded-xl -rotate-[25deg]"></div>
-    <section class="h[100vh] flex bg-gray-50 justify-between items-center px-16 pb-16 pt-8 space-x-20">
-        <div class="w-2/5 text-left">
-            <h1 class="text-6xl font-extrabold text-rose-800">Good Food Good Life</h1>
-            <h2 class="text-5xl font-bold text-red-700 my-5">Healty Lunch for You</h2>
-            <p class="text-rose-600 mb-5">terbuat dari bahan bahan sederhana yang disajikan secara modern di resto yang mungkin anda sukai</p>
-            <button class="bg-rose-700 text-white font-bold rounded-xl px-6 py-2 hover:bg-yellow-500">Book A Table</button>
+
+<body class="bg-black text-gray-800">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="bg-white transition-all duration-300 shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-yellow-500">BABAYO</h1>
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="#" class="hover:text-red-500">Home</a></li>
+        <li><a href="#menu" class="hover:text-red-500">Menu</a></li>
+        <li><a href="#about" class="hover:text-red-500">About</a></li>
+        <li><a href="#contact" class="hover:text-red-500">Contact</a></li>
+      </ul>
+    </div>
+    <script>
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('bg-black', 'text-white');
+      navbar.classList.remove('bg-white', 'text-gray-800');
+    } else {
+      navbar.classList.add('bg-white', 'text-gray-800');
+      navbar.classList.remove('bg-black', 'text-white');
+    }
+  });
+</script>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="h-screen bg-cover bg-center flex items-center justify-center " style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4');">
+    <div class="text-center bg-yellow-500 bg-opacity-50 p-10 rounded-xl text-white">
+      <h2 class="text-4xl font-bold mb-3">Welcome to Babayo Resto</h2>
+      <p class="text-lg mb-5">Nikmati nasi goreng terbaik dengan cita rasa tradisional</p>
+      <a href="#menu" class="px-6 py-3 bg-red-600 rounded-full text-white font-semibold hover:bg-red-500">Lihat Menu</a>
+    </div>
+    <div>
+        <img src="images/p.png" alt="" class="w-96 h-96 rounded-full border-8 border-white ml-20 hidden md:block">
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="py-20 max-w-6xl mx-auto px-6 ">
+    <h2 class="text-3xl font-bold text-center mb-10 text-white">Menu Favorit</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- CARD 1 -->
+      <div class="bg-white shadow-md rounded-xl overflow-hidden">
+        <img src="images/nas.png" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold text-xl">Nasi Goreng Spesial</h3>
+          <p class="text-gray-600 mt-2">Nasi goreng dengan pilihan topping premium.</p>
+          <p class="font-bold text-red-600 mt-3">Rp 25.000</p>
         </div>
-        <div class="w-1/2 flex items-center justify-center">
-            <img src="images/p.png" alt="Delicious Food" class=" h-96 w-96 drop-shadow-2xl border-8 border-rose-500 rounded-full">           
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-white shadow-md rounded-xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold text-xl">Burger Beef</h3>
+          <p class="text-gray-600 mt-2">Daging juicy dengan bumbu spesial.</p>
+          <p class="font-bold text-red-600 mt-3">Rp 30.000</p>
         </div>
-    </section>
-   </main>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-white shadow-md rounded-xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1604908811817-82f4fd44bca1" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold text-xl">Chicken</h3>
+          <p class="text-gray-600 mt-2">Sayap ayam renyah dengan saus pilihan.</p>
+          <p class="font-bold text-red-600 mt-3">Rp 22.000</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 bg-white px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-5">Tentang Kami</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Delicious Resto hadir untuk memberikan pengalaman kuliner terbaik dengan bahan berkualitas dan cita rasa yang tak terlupakan.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10 text-white">Kontak</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <div>
+        <h3 class="text-xl font-semibold mb-3 text-white">Hubungi Kami!</h3>
+        <p class="text-red-500 mb-2"> Alamat: Jl. Kenangan No. 12</p>
+        <p class="text-red-500 mb-2"> Telepon: 0812-3456-7890</p>
+        <p class="text-red-500"> Buka: 10.00 - 22.00</p>
+      </div>
+
+      <form class="bg-white shadow-md p-6 rounded-xl">
+        <input type="text" placeholder="Nama" class="w-full mb-3 p-3 border rounded">
+        <input type="email" placeholder="Email" class="w-full mb-3 p-3 border rounded">
+        <textarea placeholder="Pesan" rows="4" class="w-full mb-3 p-3 border rounded"></textarea>
+        <button class="w-full bg-red-600 text-white py-3 rounded hover:bg-red-500">Kirim</button>
+      </form>
+
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-center text-white py-4">
+    © 2025 Delicious Resto. All Rights Reserved.
+  </footer>
+
 </body>
 </html>
